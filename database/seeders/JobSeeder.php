@@ -18,7 +18,6 @@ class JobSeeder extends Seeder
    */
   public function run()
   {
-    //
     Job::truncate(); //清空表格與欄位
 
     // $faker = Faker\Factory::create('zh_TW'); // Faker使用

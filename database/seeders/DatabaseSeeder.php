@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Eloquent;
 use DB;
-use Illuminate\Queue\Events\JobProcessed;
 
 class DatabaseSeeder extends Seeder
 {
@@ -39,8 +38,9 @@ class DatabaseSeeder extends Seeder
       // MyPermissionSeeder::class,
       // MyRoleSeeder::class,
       // MyPermissionRoleSeeder::class,
-      // MyTranslationSeeder::class,
-      JobSeeder::class,
+      // MyTranslationSeeder::class
+      CatSeeder::class,
+      TaskSeeder::class,
     ]);
     //enable foreign key check for this connection before running seeders
     $this->setFKCheckOn();

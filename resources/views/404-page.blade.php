@@ -15,7 +15,6 @@
 	<br/>
 @stop
 
-
 @section('js')
 
 @stop

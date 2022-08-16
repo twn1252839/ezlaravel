@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateJobsTable extends Migration
+class CreateLoeTable extends Migration
 {
   /**
    * Run the migrations.
@@ -13,14 +13,9 @@ class CreateJobsTable extends Migration
    */
   public function up()
   {
-    // Schema::create('jobs', function (Blueprint $table) {
-    //   $table->bigIncrements('id');
-
-    //   $table->timestamps();
-    // });
-
-    Schema::create('jobs', function (Blueprint $table) {
-      $table->id(); //生成 id 欄位 是個流水號
+    Schema::create('loe', function (Blueprint $table) {
+      // 練習
+      $table->id();
       $table->string('title', 100);
       $table->integer('salary')->default(1000);
       $table->text('desc')->nullable();
@@ -36,6 +31,6 @@ class CreateJobsTable extends Migration
    */
   public function down()
   {
-    Schema::dropIfExists('jobs');
+    Schema::dropIfExists('loe');
   }
 }
